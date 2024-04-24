@@ -1,0 +1,25 @@
+<div class="main-container">
+
+   
+
+    <div class="form-container">
+        <div class="form-header">
+         
+            <fa-icon [icon]="falock"></fa-icon>
+           
+            <h3>Welcome</h3>
+        </div>
+        <form class="form-body" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <input type="text" placeholder="email" formControlName="email">
+            <input type="password" placeholder="password" formControlName="password">
+
+            <div class="form-footer">
+                <button [disabled]="!loginForm.valid">Login</button>
+                <small><p>Dont't have any account? <a routerLink="../register">Register here</a></p> </small>
+                
+            </div>
+
+        </form>
+    </div>
+
+</div>
